@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcelona-Bayern Munich</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1 { text-align: center; }
+        #events { margin: 20px auto; width: 80%; }
+        #time-info { text-align: center; margin: 20px; }
+    </style>
+    <script>
+        setInterval(function() {
+            location.reload();
+        }, 1000);  // Refresh every 5 seconds
+    </script>
+</head>
+<body>
+    <h1>Barcelona-Bayern Munich</h1>
+    <div id="time-info">
+        <h2>Time Info:</h2>
+        <p>{{ time_info }}</p>
+    </div>
+    <div id="events">
+        <h2>Events:</h2>
+        <ul>
+            {% for event in events %}
+                <li>{{ event }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
+
+
